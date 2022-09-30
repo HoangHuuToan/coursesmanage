@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+
+
+{% block body %}
+
+     <h1 class="header text-center">Manager Course</h1>
+<div class="list_course"> 
+     {% for course in courses %}
+     <a href="{{course.id}}">
+          <div class="course">
+
+               <div class="course_title"> {{course.title}}</div>
+               <img class="course_img" src="{{course.imgpath}}" alt="">
+               <div class="course_name">{{course.name}}</div>
+
+          </div>
+     </a>
+          
+     {% endfor %}
+</div>
+     
+     
+{% endblock %}
+

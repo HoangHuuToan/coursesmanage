@@ -1,0 +1,38 @@
+{% extends "./base.html.twig" %}
+
+
+
+{% block body %}
+
+     <h1 class="header text-center">Detail Course</h1>
+<div style="display:flex">
+    <div class="detail_course"> 
+        <div style="margin:auto; width:500px">
+            <div class="course_title">
+                {{course.title}}
+            </div>
+            <img src="{{course.imgpath}}" alt="">
+            <div class="course_title">
+                    {{course.name}}
+            </div>
+        </div>
+        
+
+        <h2>List Lessons Of Course {{course.name}} :</h2>
+
+        {% for lesson in lessons %}
+            <div class="detail_list_lesson">
+                <div class="detail_list_lesson_name">
+                    {{lesson.name}}
+                </div>
+                <img class="detail_list_lesson_img" src="{{lesson.link_lesson}}" alt="">
+            </div>
+        {% endfor %}
+
+
+    </div>
+</div>
+
+     
+{% endblock %}
+
